@@ -26,7 +26,9 @@ export default class App extends Component<{}> {
     return (
       <View style={{flex: 1, marginTop: Platform.OS == 'ios' ? 21 : 0}}>
         <View style={{backgroundColor: 'yellow', height: 100, flexDirection: 'row',padding: 8}}>
-          <View style={{backgroundColor: 'red', flex: 4, marginRight: 8}}>
+          <View style={{backgroundColor: 'red', flex: 4, marginRight: 8,justifyContent: 'center'}}>
+            <TextInput placeholder={'Yapılacak işi giriniz.'} style={{height: 32,backgroundColor: '#f4f4f4', borderRadius: 12, paddingLeft:10}}>
+            </TextInput>
           </View>
           <View style={{backgroundColor: 'pink', flex: 1}}>
           </View>
