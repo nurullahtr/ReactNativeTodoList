@@ -8,16 +8,20 @@ import {
   ScrollView,
   TextInput
 } from 'react-native';
-
+import MyButton from './MyButton'
 
 export default class App extends Component<{}> {
+
+  addItem(){
+    console.warn('App:addItem')
+  }
 
   renderItem(){
     return (
       <View style={{ height: 100, backgroundColor: 'black', margin: 8, borderRadius: 16,justifyContent: 'center',alignItems: 'center'}} >
-<Text style={{color: 'white', fontSize: 24}}>
-  2 Kilo patlican al :)
-</Text>
+        <Text style={{color: 'white', fontSize: 24}}>
+          2 Kilo patlican al :)
+        </Text>
       </View>
     );
   }
@@ -31,6 +35,8 @@ export default class App extends Component<{}> {
             </TextInput>
           </View>
           <View style={{backgroundColor: 'pink', flex: 1}}>
+            <MyButton onPress={this.addItem} text={'EKLE'}>
+            </MyButton>
           </View>
         </View>
         <ScrollView>
